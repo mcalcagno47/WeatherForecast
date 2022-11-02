@@ -29,7 +29,18 @@ header {
     display: flex;
 }
 
-.forecast {
+main {
+    min-width: none;
+    max-width: none;
+}
+
+.days-forecast {
     background: green;
     display: flex;
+    margin: auto;
+    padding: 5%;
+}
+
+.hide {
+    display: none;
 }
