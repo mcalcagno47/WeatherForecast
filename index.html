@@ -6,8 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>5 Day Weather Forecast</title>
     <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+
 </head>
 <body>
+    
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <information class="information">
+        <aside class="column">
+            <div id="search-section">
+                <div class="card">
+                <h3 class="card-header">
+                    Search for a City:
+                </h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="city-input" placeholder="Chicago" />
+                </div>
+                <div class="card-body">
+                    <button class="btn btn-block btn-info">Search</button>
+                    <div>
+                        <p id="previous-searches">Previous city searches populate here</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </aside>
+
+        <main id="forecast-section">        
+            <div class="current-weather col-12 col-md-9" id="current-weather">
+                <p>Current weather goes here</p>
+            </div>
+            <div class="forecast col-12 col-md-9" id="forecast">
+                <p>5 day forecast goes here</p>
+            </div>
+        </main>    
+    </information>        
+
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

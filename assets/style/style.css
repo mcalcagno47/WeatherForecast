@@ -1,0 +1,35 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    background-image: linear-gradient(to right, rgb(0, 214, 179), blue);
+    text-align: center;
+    color: aliceblue;
+    padding: 2px;
+    font-size: 18pt;
+}
+
+.information {
+    display: flex;
+}
+
+.info-container {
+    background-color: yellow;
+    padding: 5px;
+}
+
+.search-section {
+    background: blue;
+    display: flex;
+}
+
+.current-weather {
+    background: red;
+    display: flex;
+}
+
+.forecast {
+    background: green;
+    display: flex;
+}
