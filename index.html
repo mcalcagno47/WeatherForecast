@@ -19,19 +19,18 @@
         <aside class="column">
             <div id="search-section">
                 <div class="card">
-                <h3 class="card-header">
-                    Search for a City:
-                </h3>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="city-input" placeholder="Chicago" />
-                </div>
-                <div class="card-body">
-                    <button class="btn btn-block btn-info">Search</button>
-                    <div>
-                        <p id="previous-searches">Previous city searches populate here</p>
-                        
+                    <h3 class="card-header">
+                        Search for a City:
+                    </h3>
+                    <div class="form-group">
+                        <input type="text" class="city-input" id="city-input" placeholder="Chicago" />
                     </div>
-                </div>
+                    <div class="card-body">
+                        <button class="btn btn-block btn-info" id="btn">Search</button>
+                            <div class="card">
+                                <p>Previous Cities: <span id="saved-city"></span></p>
+                            </div>
+                    </div>
                 </div>
             </div>
         </aside>
