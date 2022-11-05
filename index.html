@@ -16,81 +16,69 @@
     </header>
 
     <information class="information">
-        <aside class="column">
-            <div id="search-section">
-                <div class="card">
-                    <h3 class="card-header">
-                        Search for a City:
-                    </h3>
-                    <div class="form-group">
-                        <input type="text" class="city-input" id="city-input" placeholder="Chicago" />
-                    </div>
-                    <div class="card-body">
-                        <button class="btn btn-block btn-info" id="btn">Search</button>
-                            <div class="card">
-                                <p>Previous Cities: <span id="saved-city"></span></p>
-                            </div>
+        <div>
+            <aside class="col">
+                <div id="search-section">
+                    <div class="card">
+                        <h3 class="card-header">Search for a City:</h3>
+                        <div class="form-group">
+                            <input type="text" class="city-input" id="city-input" placeholder="Chicago" />
+                        </div>
+                        <div class="card-body">
+                            <button class="btn btn-block btn-info" id="btn">Search</button>
+                                <div class="card">
+                                    <h4>Previous Cities</h4>
+                                    <span id="saved-city"></span>
+                                </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </aside>
+            </aside>
+        </div>
 
-        <current>
-            <div class="jumbotron hide" id="current-weather">
-                <p>Current weather goes here</p>
-            </div>
-        </current>
+        <div>
+            <current>
+                <div class="hide" id="current-weather">
+                    <div class="row weather" id="Todaysforecast">
+                        <div class="col">
+                            <div class="card">
+                                <h3 class="card-title p-2">Today's Date</h3>
+                                <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather description"/>
+                                <div class="card-title">
+                                    <h4>Weather Label</h4>
+                                    <p class="card-title">Temp</p>
+                                    <p class="card-title">Wind</p>
+                                    <p class="card-title">Humidity</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </current>
+        </div>
 
-        <main id="forecast-section">        
-            <div class="jumbotron hide" id="5dayforecast">
-                <h3>Date</h3>
-                <ul>
-                    <li id="icon">Icon</li>                    
-                    <li id="temp">Temp</li>                    
-                    <li id="wind">wind</li>
-                    <li id="humidity">humidity</li>
-                </ul>
-            </div>
-            <div class="jumbotron hide" id="5dayforecast">
-                <h3>Date</h3>
-                <ul>
-                    <li id="icon">Icon</li>                    
-                    <li id="temp">Temp</li>                    
-                    <li id="wind">wind</li>
-                    <li id="humidity">humidity</li>
-                </ul>
-            </div>
-            <div class="jumbotron hide" id="5dayforecast">
-                <h3>Date</h3>
-                <ul>
-                    <li id="icon">Icon</li>                    
-                    <li id="temp">Temp</li>                    
-                    <li id="wind">wind</li>
-                    <li id="humidity">humidity</li>
-                </ul>
-            </div>
-            <div class="jumbotron hide" id="5dayforecast">
-                <h3>Date</h3>
-                <ul>
-                    <li id="icon">Icon</li>                    
-                    <li id="temp">Temp</li>                    
-                    <li id="wind">wind</li>
-                    <li id="humidity">humidity</li>
-                </ul>
-            </div>
-            <div class="jumbotron hide" id="5dayforecast">
-                <h3>Date</h3>
-                <ul>
-                    <li id="icon">Icon</li>                    
-                    <li id="temp">Temp</li>                    
-                    <li id="wind">wind</li>
-                    <li id="humidity">humidity</li>
-                </ul>
-            </div>
+        <div>
+            <main id="forecast-section">        
+                <div class="row weather" id="5dayforecast">
+                    <div class="col">
+                        <div class="card">
+                            <h3 class="card-title p-2">Date</h3>
+                            <img src="http://openweathermap.org/img/wn/10d@4x.png" class="card-img-top" alt="Weather description"/>
+                            <div class="card-title">
+                                <h4>Weather Label</h4>
+                                <p class="card-title">Temp</p>
+                                <p class="card-title">Wind</p>
+                                <p class="card-title">Humidity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>          
+        </div>  
 
-        </main>    
-    </information>        
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </information>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
