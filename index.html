@@ -13,6 +13,38 @@
     
     <header>
         <h1>Weather Dashboard</h1>
+
+        <nav class="container">
+            <div class="row align-items-center py-2">
+              <div class="input-group col-sm">
+                <span class="input-group-text" id="basic-addon1">Lat</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  inputmode="numeric"
+                  id="latitude"
+                  placeholder="latitude"
+                  aria-label="latitude"
+                  aria-describedby="basic-addon1"
+                  value="42.98"
+                />
+              </div>
+              <div class="input-group col-sm">
+                <span class="input-group-text" id="basic-addon1">Lon</span>
+                <input
+                  type="text"
+                  class="form-control"
+                  inputmode="numeric"
+                  id="longitude"
+                  placeholder="longitude"
+                  aria-label="longitude"
+                  aria-describedby="basic-addon1"
+                  value="-81.23"
+                />
+              </div>
+            </div>
+
+
     </header>
 
     <information class="information">
@@ -25,7 +57,7 @@
                             <input type="text" class="city-input" id="city-input" placeholder="Chicago" />
                         </div>
                         <div class="card-body">
-                            <button class="btn btn-block btn-info" id="btn">Search</button>
+                            <button class="btn search-btn btn-block btn-info" id="search-btn">Search</button>
                                 <div class="card">
                                     <h4>Previous Cities</h4>
                                     <span id="saved-city"></span>
