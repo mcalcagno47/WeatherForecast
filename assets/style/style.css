@@ -32,6 +32,7 @@ header {
 main {
     min-width: none;
     max-width: none;
+    display: flex;
 }
 
 .days-forecast {
@@ -41,6 +42,8 @@ main {
     padding: 5%;
 }
 
-.hide {
+.forecast-section {}
+
+/* .hide {
     display: none;
-}
+} */
