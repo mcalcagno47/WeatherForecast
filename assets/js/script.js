@@ -7,12 +7,12 @@ const app = {
 
     // (ev) is the event of clicking the search button
     fetchWeather: (ev) => {
-        var lat = document.getElementById('latitude').value;
-        var lon = document.getElementById('longitude').value;
-        var key = '99c3f0b955fb6ab95dfe2df6ef3c94ea';
-        var lang = 'en';
-        var units = 'imperial';
-        var url = `http://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+        let lat = document.getElementById('latitude').value;
+        let lon = document.getElementById('longitude').value;
+        let key = '99c3f0b955fb6ab95dfe2df6ef3c94ea';
+        let lang = 'en';
+        let units = 'imperial';
+        let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}`;
 
         fetch(url)
             .then((data) => {
@@ -36,11 +36,12 @@ const app = {
     },
 
     showWeather: (resp) => {
-        console.log(resp);
         let row = document.querySelector('.weather.row');
-        //resp.daily is the 5 day forecast, see line 44 with idx <= 5.
-        row.innerHTML = resp.daily
-            .map((day, idx) => {
+        let respJson = resp.json()
+        console.log(respJson);
+        // resp.daily is the 5 day forecast, see line 44 with idx <= 5.
+        row.innerHTML = respJson
+            .each((day, idx) => {
                 if (idx <= 5) {
                     let dt = new Date(day.dt * 1000);
                     return `<div class="col">
@@ -63,3 +64,6 @@ const app = {
 }
 
 app.init();
+
+
+// let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
