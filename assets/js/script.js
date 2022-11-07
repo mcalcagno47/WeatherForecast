@@ -1,9 +1,62 @@
+var previousCities = document.querySelector("saved-cities")
+let cityInput = document.querySelector("#city-input").value;
+
+var previousCitiesList = [];
+
 const app = {
     init: () => {
         document
             .querySelector('#search-btn')
             .addEventListener('click', app.fetchWeather);
     },
+
+    // setLatAndLong: (ev) => {
+
+    //     localStorage.setItem("city-input", cityInput);
+    //     console.log(cityInput)
+
+    //     fetchLatAndLong();
+    // },
+
+    // fetchLatAndLong: (ev) => {
+    //     let city = localStorage.getItem("city-input")
+
+    //     btn.textContent
+
+    //     fetchWeather();
+    // },
+
+    // previousCityButton: (ev) => {
+    //     // Clear todoList element and update todoCountSpan
+    //     previousCitiesList.innerHTML = "";
+
+    //     // Render a new li for each todo
+    //     for (var i = 0; i < previousCities.length; i++) {
+    //         var previousCity = previousCities[i];
+
+    //         var li = document.createElement("li");
+    //         li.textContent = previousCity;
+    //         li.setAttribute("data-index", i);
+
+    //         var button = document.createElement("button");
+    //         button.textContent = "city-input";
+
+    //         li.appendChild(button);
+    //         previousCitiesList.appendChild(li);
+
+    //         storeCity();
+    //     }
+    // },
+    // storeCity() {
+    //     localStorage.setItem("city-input", json.stringify(cityInput));
+    // },
+
+    // append latitude and longitude with city.coord.lat and city.coord.lon
+    // let cityInput = document.getElementById('city-input').value;
+
+    // set local storage for cities
+    // get local storage for cities, turn to buttons
+
 
     fetchWeather: (ev) => {
         let lat = document.getElementById('latitude').value;
@@ -16,6 +69,8 @@ const app = {
         fetch(url)
             .then((response) => response.json())
             .then((data) => app.showWeather(data));
+        var element = document.getElementById("current-weather");
+        element.classList.remove("hide");
     },
 
     getLocation: (ev) => {
@@ -36,12 +91,11 @@ const app = {
     showWeather: (resp) => {
         let row = document.querySelector('.weather.row');
 
-        let filteredList = resp.list.filter(function (v, index) { return [0, 8, 16, 24, 32, 39].includes(index) })
+        let filteredList = resp.list.filter(function (v, index) { return [0, 8, 16, 24, 30, 39].includes(index) })
 
         row.innerHTML = filteredList
             .map((day, idx) => {
-                console.log(day)
-                if (idx <= 4) {
+                if (idx <= 5) {
                     let dt = new Date(day.dt * 1000);
                     return `<div class="col">
                                 <div class="card">
