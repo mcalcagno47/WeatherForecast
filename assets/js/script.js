@@ -1,5 +1,6 @@
-var previousCities = document.querySelector("saved-cities")
-let cityInput = document.querySelector("#city-input").value;
+const savedCities = document.querySelector("saved-cities");
+const cityInput = document.querySelector("#city-input").value;
+const searchBtn = document.querySelector("#search-btn");
 
 var previousCitiesList = [];
 
@@ -8,48 +9,14 @@ const app = {
         document
             .querySelector('#search-btn')
             .addEventListener('click', app.fetchWeather);
+        const previousCities = cityInput.value;
+
+        console.log(previousCities)
+
+        if (previousCities) {
+            localStorage.setItem(previousCities)
+        }
     },
-
-    // setLatAndLong: (ev) => {
-
-    //     localStorage.setItem("city-input", cityInput);
-    //     console.log(cityInput)
-
-    //     fetchLatAndLong();
-    // },
-
-    // fetchLatAndLong: (ev) => {
-    //     let city = localStorage.getItem("city-input")
-
-    //     btn.textContent
-
-    //     fetchWeather();
-    // },
-
-    // previousCityButton: (ev) => {
-    //     // Clear todoList element and update todoCountSpan
-    //     previousCitiesList.innerHTML = "";
-
-    //     // Render a new li for each todo
-    //     for (var i = 0; i < previousCities.length; i++) {
-    //         var previousCity = previousCities[i];
-
-    //         var li = document.createElement("li");
-    //         li.textContent = previousCity;
-    //         li.setAttribute("data-index", i);
-
-    //         var button = document.createElement("button");
-    //         button.textContent = "city-input";
-
-    //         li.appendChild(button);
-    //         previousCitiesList.appendChild(li);
-
-    //         storeCity();
-    //     }
-    // },
-    // storeCity() {
-    //     localStorage.setItem("city-input", json.stringify(cityInput));
-    // },
 
     // append latitude and longitude with city.coord.lat and city.coord.lon
     // let cityInput = document.getElementById('city-input').value;
