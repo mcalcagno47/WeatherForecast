@@ -60,7 +60,7 @@ const app = {
                     return `<div class="col">
                                 <div class="card">
                                 <h5 class="card-title p-2">${dt.toDateString()}</h5>
-                                    <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" class="card-img-top" alt="${day.weather[0].description}"/>
+                                    <img src="https://openweathermap.org/img/wn/${day.weather[0].icon}@4x.png" class="card-img-top" alt="${day.weather[0].description}"/>
                                     <div class="card-body">
                                         <h3 class="card-title">${day.weather[0].main}</h3>
                                         <p class="card-text">Temperature ${day.main.temp}&deg;</p>
