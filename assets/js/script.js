@@ -9,13 +9,6 @@ const app = {
         document
             .querySelector('#search-btn')
             .addEventListener('click', app.fetchWeather);
-        const previousCities = cityInput.value;
-
-        console.log(previousCities)
-
-        if (previousCities) {
-            localStorage.setItem(previousCities)
-        }
     },
 
     // append latitude and longitude with city.coord.lat and city.coord.lon
