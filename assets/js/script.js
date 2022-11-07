@@ -24,7 +24,7 @@ const app = {
         let key = '99c3f0b955fb6ab95dfe2df6ef3c94ea';
         let lang = 'en';
         let units = 'imperial';
-        let url = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
+        let url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${key}&units=${units}&lang=${lang}`;
 
         fetch(url)
             .then((response) => response.json())
