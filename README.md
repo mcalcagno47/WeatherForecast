@@ -17,7 +17,7 @@ Mark Calcagno
 Jordy Williams, tutor
 
 ## Links
-The site: https://mcalcagno47.github.io/DailyCalendar/
+The site: https://mcalcagno47.github.io/WeatherForecast/
 My github: https://github.com/mcalcagno47/WeatherForecast   
 
 ## Updates
